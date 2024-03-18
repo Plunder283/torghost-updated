@@ -16,7 +16,7 @@ VERSION = "3.1.1"
 
 IP_API = "https://api.ipify.org/?format=json"
 
-LATEST_RELEASE_API = "https://api.github.com/repos/SusmithKrishnan/torghost/releases/latest"
+LATEST_RELEASE_API = "https://api.github.com/repos/Plunder283/torghost-updated"
 
 
 class bcolors:
@@ -46,13 +46,14 @@ def sigint_handler(signum, frame):
 def logo():
     print(bcolors.RED + bcolors.BOLD)
     print("""
-      _____           ____ _               _
-     |_   _|__  _ __ / ___| |__   ___  ___| |_
-       | |/ _ \| '__| |  _| '_ \ / _ \/ __| __|
-       | | (_) | |  | |_| | | | | (_) \__ \ |_
-       |_|\___/|_|   \____|_| |_|\___/|___/\__|
-	{V} - github.com/SusmithKrishnan/torghost
-
+  _______          _____ _               _     _    _ _____  
+ |__   __|        / ____| |             | |   | |  | |  __ \ 
+    | | ___  _ __| |  __| |__   ___  ___| |_  | |  | | |__) |
+    | |/ _ \| '__| | |_ | '_ \ / _ \/ __| __| | |  | |  ___/ 
+    | | (_) | |  | |__| | | | | (_) \__ \ |_  | |__| | |     
+    |_|\___/|_|   \_____|_| |_|\___/|___/\__|  \____/|_|     
+	updated by : https://github.com/Plunder283/torghost-updated
+    created by : https://github.com/SusmithKrishnan/torghost
     """.format(V=VERSION))
     print(bcolors.ENDC)
 
@@ -219,7 +220,7 @@ def check_update():
             bcolors.BOLD + "Would you like to download latest version and build from Git repo? [Y/n]" + bcolors.ENDC).lower()
         if choice in yes:
             os.system(
-                'cd /tmp && git clone  https://github.com/SusmithKrishnan/torghost')
+                'cd /tmp && git clone  https://github.com/Plunder283/torghost-updated')
             os.system('cd /tmp/torghost && sudo ./build.sh')
         elif choice in no:
             print(t() + " Update aborted by user")
